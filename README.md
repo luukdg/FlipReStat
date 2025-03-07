@@ -2,7 +2,7 @@
 
 FlipReStat is a Discord bot that retrieves Rocket League stats directly in your server using web scraping and proxies. It allows players to check their ranks, track stats, and view leaderboard information—all within Discord!  
 
-![Description of Image](img/screenshot1.png)
+![Bot Demo](img/demo.gif)
 
 ## 📌 Features  
 
