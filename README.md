@@ -1,70 +1,74 @@
-FlipReStat - Your Personal Rocket League Stat-Tracking Discord Bot 🚀
-FlipReStat is a powerful yet simple Discord bot designed to track Rocket League stats for you and your friends. Whether you're curious about your ranks, want to compare stats with others, or explore additional game modes, FlipReStat has got you covered!
+# 🚀 FlipReStat - A Rocket League Stat-Tracking Discord Bot  
 
-🛠 Features
-Meet FlipReStat, your personal Rocket League stat-tracker! Here’s what it can do:
+FlipReStat is a Discord bot that retrieves Rocket League stats directly in your server using web scraping and proxies. It allows players to check their ranks, track stats, and view leaderboard information—all within Discord!  
 
-🚀 /register: Link your Epic username to start tracking your stats.
-🎮 /rank-me: View your 1v1, 2v2, and 3v3 ranks.
-🔍 /rank-player: Check the ranks of any other player.
-🌟 /rank-player-extra: Get ranks for extra modes like Hoops, Rumble, Dropshot, and Snowday.
-📊 /stats-player: View detailed stats such as goals, assists, and saves.
-📋 /player-list: See all registered players in your server.
-❓ /help: Get an overview of all available commands.
-📦 Installation
-Follow these steps to set up FlipReStat locally:
+![Description of Image](img/screenshot1.png)
 
-Clone the repository:
-git clone https://github.com/your-username/fliprestat.git
-cd fliprestat
-Install dependencies:
-npm install
-Set up your .env file: Create a .env file in the root directory and add the following variables:
-DISCORD_TOKEN=your-discord-bot-token
-USERNAME=your-username
-PASSWORD=your-password
-Start the bot:
-node index.js
-🚀 How It Works
-Unfortunately, there is no free public API available for Rocket League stats. To overcome this, FlipReStat uses Cloudscraper in combination with proxies to scrape data from Rocket League Tracker Network. This ensures accurate and up-to-date stats for all players.
+## 📌 Features  
 
-🖼 Screenshots (Optional)
-Add screenshots or GIFs here to showcase how the bot works in action! For example:
+FlipReStat allows you to track Rocket League stats with simple commands:  
 
-A screenshot of the /rank-me command output.
-A GIF showing the /help command.
-🧰 Dependencies
-FlipReStat relies on the following libraries:
+### 📊 Commands 
+- 🔗 **`/register`** – Link your Epic username to your Discord account.  
+- 🎮 **`/rank-me`** – View your ranks in 1v1, 2v2, and 3v3.  
+- 🔍 **`/rank-player`** – Check the ranks of another player.  
+- 🎭 **`/rank-player-extra`** – View ranks for extra modes: Hoops, Rumble, Dropshot & Snowday.   
+- ⚽ **`/stats-player`** – See goals, assists, MVPs, saves, and shots.  
+- 📝 **`/player-list`** – Get a list of registered players.  
+- 📚 **`/help`** – Display all available commands and how to use them.  
 
-Cloudscraper: For bypassing anti-bot measures while scraping data.
-fake_useragent: To generate random user agents for requests.
-discord.js: For building and interacting with the Discord bot.
-🤝 Contributing
-This is my first real project, and I’m still learning! If you’d like to contribute or improve the bot, feel free to fork the repository and submit a pull request. Here's how:
+## 🛠️ Technical Overview  
 
-Fork the repository.
-Create a new branch (git checkout -b feature/YourFeature).
-Commit your changes (git commit -m 'Add YourFeature').
-Push to the branch (git push origin feature/YourFeature).
-Open a pull request.
-🧪 Testing
-If you'd like to test the bot locally, make sure you have the required environment variables set up in your .env file. Then, run the bot using:
+FlipReStat leverages the following technologies:  
 
-node index.js
-Test commands directly in your Discord server to ensure everything works as expected.
+*   **Discord.py** – The core library for interacting with the Discord API.  
+*   **Cloudscraper** – A web scraping library used to bypass bot protection and retrieve data from the Rocket League Tracker Network.  
+*   **Proxies** – Used to avoid rate limits and improve request reliability.  
+*   **Fake User Agent** – Rotates user agents to prevent detection and blocking.  
+*   **JSON** – Stores and retrieves user data efficiently.  
 
-📜 License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+## 🛠️ Setup & Configuration  
 
-🌟 Acknowledgments
-This project wouldn’t have been possible without:
+### 1⃣ Prerequisites  
+- Python 3.9+  
+- A registered Discord bot token  
+- An Epic Games account (for linking ranks)  
 
-Rocket League Tracker Network for providing the data source.
-The creators of the libraries used in this project.
-The amazing Discord.js community for their helpful documentation and support.
-💬 Contact
-I’m a beginner programmer, and this is my first real project that I managed to get up and running after two weeks of trial and error. If you have any feedback, questions, or suggestions, feel free to reach out:
+### 2⃣ Clone the repository  
+```sh  
+git clone https://github.com/yourusername/FlipReStat.git  
+cd FlipReStat  
+```
 
-GitHub: @your-username
-Email: your-email@example.com
-Let me know if you'd like me to add anything else or refine it further! 😊
+### 3⃣ Install dependencies  
+```sh  
+pip install -r requirements.txt  
+```
+
+### 4⃣ Create a `.env` file and configure your credentials  
+Create a `.env` file in the root directory and add:  
+```ini  
+DISCORD_TOKEN=your-discord-bot-token  
+PROXY_USERNAME=your-proxy-username  
+PROXY_PASSWORD=your-proxy-password  
+```
+
+### 5⃣ Run the bot  
+```sh  
+python main.py  
+```
+
+## 📌 Notes  
+
+- Unfortunately, there is no free public Rocket League API available.  
+- FlipReStat uses **Cloudscraper + Proxies** to retrieve stats from Rocket League Tracker Network.  
+- Usernames, passwords, and Discord tokens should always be stored securely in a `.env` file.  
+
+## 🎯 About This Project  
+
+This is my **first real programming project**, built over **two weeks of trial and error**.  
+Be gentle about the way I coded this, there is probably lot's of improvement to be made. 🚀  
+
+---
+
+✨ **Developed by luukdg**  

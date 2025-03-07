@@ -291,7 +291,7 @@ async def on_guild_join(guild):
         )
         embed.set_footer(text="✨ Ontwikkeld door Skywalker")
 
-        with open("logo.png", "rb") as file:
+        with open("img/logo.png", "rb") as file:
             image_file = discord.File(file, filename='logo.png')
             embed.set_thumbnail(url="attachment://logo.png")
 
